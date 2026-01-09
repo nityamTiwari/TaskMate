@@ -99,6 +99,6 @@ git clone https://github.com/<your-username>/TaskMate.git
 - **Version 2:** Improved UI, better responsiveness, and bug fixes and with authentication
 
 📲 **Download the APKs from the GitHub Releases section:**
-👉 https://github.com/nityamTiwari/TaskMate/releases
+👉 [https://github.com/nityamTiwari/TaskMate/releases](https://github.com/nityamTiwari/TaskMate/releases/tag/V2.0)
 
 Simply install the APK on your Android device and start using TaskMate.
