@@ -3,4 +3,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimaryDark">@android:color/holo_blue_light</color>
+    <color name="primary">#3F51B5</color>   <!-- change if your project has different -->
+    <color name="primary_dark">#303F9F</color>
+    <color name="accent">#FF9800</color>
+    <color name="background">#FFFFFF</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
 </resources>

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,18 +14,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ToDoListExample"
         tools:targetApi="31">
+
+        <!-- SPLASH (LAUNCHER) -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <!-- HOME -->
         <activity
             android:name=".MainActivity"
-            android:exported="true"/>
-    </application>
+            android:exported="false"/>
 
+        <!-- LOGIN -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"/>
+
+        <!-- SIGNUP -->
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false"/>
+
+    </application>
 </manifest>

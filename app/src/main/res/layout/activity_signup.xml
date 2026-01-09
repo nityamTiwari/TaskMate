@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <!-- TOP GUIDELINE (same as login) -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="512dp" />
+
+        <!-- CENTER GUIDELINE -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/centerGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <!-- LOGO (EXACT SAME POSITION AS LOGIN) -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icon"
+            android:contentDescription="Logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/topGuide"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintVertical_bias="0.957" />
+
+        <!-- TITLE (SAME PLACE AS TaskMate IN LOGIN) -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- EMAIL (CENTER AREA) -->
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:backgroundTint="@color/primary"
+            app:layout_constraintTop_toTopOf="@id/centerGuide"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- PASSWORD -->
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/primary"
+            app:layout_constraintTop_toBottomOf="@id/email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- SIGNUP BUTTON -->
+        <Button
+            android:id="@+id/signupBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/primary"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/password"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- LOGIN LINK -->
+        <TextView
+            android:id="@+id/loginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Login"
+            android:textColor="@color/primary"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/signupBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

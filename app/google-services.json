@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "481609842964",
+    "project_id": "taskmate-3c439",
+    "storage_bucket": "taskmate-3c439.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481609842964:android:fb436f09fd4c062c7c8201",
+        "android_client_info": {
+          "package_name": "com.ferrytech.todolist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJQJMwdsNNEzdDzDEh1XMIFat_HTiTn4g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481609842964:android:70c75c6ff345ad277c8201",
+        "android_client_info": {
+          "package_name": "com.ferrytech.todolistexample"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJQJMwdsNNEzdDzDEh1XMIFat_HTiTn4g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

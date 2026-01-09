@@ -6,9 +6,8 @@ import android.os.Handler;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -18,21 +17,20 @@ public class SplashActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_splash);
 
-        final Intent i = new Intent(SplashActivity.this,MainActivity.class);
+        new Handler().postDelayed(() -> {
 
-       new Handler().postDelayed(new Runnable() {
-           @Override
-           public void run() {
-               startActivity(i);
-           }
-       }, 2000);
+            Intent intent;
+            if (FirebaseAuth.getInstance().getCurrentUser() != null) {
+                // User already logged in
+                intent = new Intent(SplashActivity.this, MainActivity.class);
+            } else {
+                // User not logged in
+                intent = new Intent(SplashActivity.this, LoginActivity.class);
+            }
 
+            startActivity(intent);
+            finish();
 
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        }, 2000);
     }
 }
